@@ -38,6 +38,26 @@ public class rizki_pertemuan3 {
                 }
             }
             System.out.println("\nTotal IPK = " + total);
+
+            // tampilkan ipk terbesar, ipk terkecil, rata rata ipk
+            float ipkTerbesar = ipk[0];
+            float ipkTerkecil = ipk[0];
+            float rataRata = total / banyak;
+            
+            // Cari IPK terbesar dan terkecil
+            for(int i = 1; i < banyak; i++) {
+                if(ipk[i] > ipkTerbesar) {
+                    ipkTerbesar = ipk[i];
+                }
+                if(ipk[i] < ipkTerkecil) {
+                    ipkTerkecil = ipk[i];
+                }
+            }
+            
+            System.out.println("\nStatistik IPK:");
+            System.out.println("IPK Terbesar = " + ipkTerbesar);
+            System.out.println("IPK Terkecil = " + ipkTerkecil);
+            System.out.println("Rata-rata IPK = " + rataRata);
             
             // Tanya apakah ingin mengulang program
             System.out.print("\nApakah Anda ingin mengulang program (Y/T)? ");
